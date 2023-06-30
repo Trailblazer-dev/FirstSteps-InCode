@@ -1,0 +1,87 @@
+<!--This web page we will deal with form which entals fiels as buttons ,check boxes.
+-->
+<!DOCTYPE>
+<html>
+    <head>
+        <style>
+        #backs{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-image: url(photo_2023-05-23_21-51-31.jpg);
+            background-color: cadetblue;
+            background-attachment: scroll;
+            font-style: inherit;
+            color: gold;
+
+        }
+    </style>
+        <title>tutorial 3: Form</title>
+    </head>
+    <body id="backs" bgcolor="navyblue">
+        <p><h3 align="center"><b> Topic:Mindfulness</b></h3>
+            <dl>
+                <dt>Mindfulness</dt>
+                <dd> is the practice of being fully presrnt in the moment, aware of our thoughts, feelings and  sensations without judgment.<br>
+                    In today's fast-paced world, it can be easy to get caught up in the whirlwind of tasks, distractions, and worries.<br>
+                    However, by cultivating mindfulness, we can find a sense of calm and clarity amidst the chaos. Mindfulness, we can find a<br>
+                     sense of calm and clarity amidst the chaos. Mindfulness, we can find a sense of calm and clariy amidst the chaos.Mindfulness
+                      encourages us to pay attention  to the present moment, to observe our experiences with an open mind, and to fully engage in 
+                      whatever we are doing. It allows us to appreciate the simple joys of life, to connect with ourselves and the others on a deeper 
+                      , and to navigate challenges with greater resilience. Through regular practice, mindfulness can become valuable tool for managing 
+                      stress , enhancing well-being, and fostering a greater sense of inner peace.
+                </dd>
+            </dl>
+            <!--form element provide a document section to take input from user but it requires it elemt-->
+            <form>
+                <label for="rate">Rate the topic</label><br><!--the tag br is used to break a line -->
+                <input type="text" id="rate" name="rate">
+                <!--input is used to take input from the user-->
+                <!-- The type="text" of the input tag ,type is used to specific the type of data or format of data   to be enterd
+                the name attribute is optional but it is required for the server side component such as PHP
+            NB: IF u omit "name " attribute then the text filed input will not be submmitted to server.-->
+            <label for="name">What your name?</label>
+            <input type="text" name="name">
+            <!--<textarea> is used to insert  multiple multiple-line text in a form i.e row and columns-->
+               <br>
+               <label for="feedback">Let's hear your feedback:</label> <textarea id="feedback" rows="2" cols="2"></textarea><br>
+            <!--It is considered to have label in a form for it makes the code friendly -->
+            <label for="cartype">Car type:</label><!--It is good to use label tag with form although it is optional ,it provide a focus when you tap or click on label tag.
+            it is more worthy with touchscreen-->
+            <input type="text" id="cartype" name="cartype">
+            <!--id attribute in HTML is used to uniquely identify an element within a web page. 
+                It provides a way to reference and manipulate specific elements using CSS and JavaScript-->
+                      
+                <label for="password">password:</label>
+                <input type="password" id="password" name="password">
+            <!--Wow form also contains email--><br>            
+                <label for="email">email :<br></label>
+                <input type="email" id="email" name="email">
+            <q>Life presents you with a choice, a decisive test, Between comfort and growth, which path is best?<form align="center">
+                <input type="radio" id="ease" name="resides">Stay in the familiar, where ease resides<input type="radio" id="greatness" name="hides">Venture into the unknown 
+                where greatness hides?<br>
+                <!--radio buttons you can only select one button at a time-->
+            </q>
+            Which option do you prefer?<form align="center">
+                A:<input type="checkbox" id="A" name="Alpha"><br>B:<input type="checkbox" id="B" name="Beta">
+            <!--here someone can select multiple options at a time-->
+        </p>
+        <p align="center" ><cite>Life is like a journey Through a dense fores.Each step we take ia akin to pushing through the thick undergrowth, facing obstacles and unknowns along the way.
+            We may encounter winding paths,steep  climbs, or unexpected forks in the road.Just as we navigate the forest with determination and resilience, life requires us to forge ahead with courage
+            and adaptability
+                <input type="submit" value="submit">
+            
+            <!--FIELDSET is used to group related information  of a form. It is used with legend which provide a caption  for the grouped elements -->
+        </cite></p>
+        <p>We value your  feedback ans we would love to hear from you  soon.Please take a moment to provide us with your details using the form below.YOUR information will help us serve you better.<form>
+            <fieldset><legend>user information</legend>
+            <label for="name">Enter name:</label>
+        <input type="text" id="name" name="name"><br>
+    <label for="email">Enter your email:</label>
+<input type="email" id="email" name="email"><br>
+<label for="password">password:</label>
+<input type="password" id="password" name="password"><br>
+<input type="submit" value="submit"></fieldset>
+        </form></p>
+        <p><a href="form.html">Click here to see whole form</a></p>
+        <p><a href="tutorial5.html">Here is the next tutorial</a></p>
+    </body>
+</html>
