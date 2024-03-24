@@ -1,6 +1,0 @@
-//calculate profit and loss
-#include<stdio.h>
-int main(){
-float bp,sp;
-printf("Enter the Buying price & Selling price");
-scanf("%f",&

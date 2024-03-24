@@ -11,7 +11,8 @@ int main(int values[5][6]){
     }
 }
 int array(int arr[5][6]){
-    sum,avg;
+    int sum;
+    double avg;
     for(i=0;i<5;i++){
         for(j=0;j<6;j++){
             sum+=arr[i][j];
@@ -19,7 +20,7 @@ int array(int arr[5][6]){
     }
     for(i=0;i<5;i++){
         for(j=0;j<5;j++){
-            avg=sum/
+            avg=sum;
         }
     }
 }
