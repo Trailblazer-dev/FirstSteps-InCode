@@ -3,7 +3,8 @@
 #include<string.h>
 #include<unistd.h>
 #include<time.h>
-int main(int argc, char *argv[]){
+#include<sys/wait.h>
+int main(void){
     int id = fork();
     int n;
     if(id==0){
@@ -13,7 +14,7 @@ int main(int argc, char *argv[]){
         n=6;
     }
     if(id !=0){
-        wait();
+        wait(NULL);
     }
     int i;
     for(i=n;i<n+5;i++){

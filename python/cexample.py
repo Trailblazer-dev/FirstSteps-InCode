@@ -8,4 +8,3 @@ foot = manual("v321", "B")
 print(foot)
 print(foot.model, foot.category)
 #indexing is very important always keep that in Mind
-        
