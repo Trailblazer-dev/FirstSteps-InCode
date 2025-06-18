@@ -1,7 +1,7 @@
 '''splitting is reverse operation of Joining'''
 import numpy as np
 no = np.array([2,3,4,5,67,9,8])
-s = np.array_split(no,4)# if the array jas less elements than required it will adjust from the end accordingly
+s = np.array_split(no,4)# if the array has less elements than required it will adjust from the end accordingly
 print(s)
 '''NOTE we also have method split() available but it will not adjust the elements when elements are less in source array fro  splitting like  array_split()'''
 # when you split array your can access the arrays using their index like below
