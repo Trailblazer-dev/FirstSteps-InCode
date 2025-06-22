@@ -94,3 +94,50 @@ user.increment_login_attempts()
 print(f"Login attempts: {user.login_attempts}.")
 user.reset_login_attempts()
 print(f"Login attempts after reset: {user.login_attempts}.")
+
+
+class IceCreamStand(Restaurant):
+    """A type of restaurant that serves ice cream."""
+    
+    def __init__(self,flavors):
+        """Initialize the ice cream stand """
+        
+        super().__init__("Ice Cream Stand", "Dessert")
+        self.flavor = flavors
+    
+    def display_flavors(self):
+        """Display the available ice cream flavors."""
+        print("Available ice cream flavors:")
+        for flavor in self.flavor:
+            print(f"- {flavor} ")
+ice_cream_stand = IceCreamStand(["Vanilla", "Chocolate", "Strawberry"])
+ice_cream_stand.describe_restaurant()
+
+ice_cream_stand.display_flavors()
+
+class Privileges:
+    """A class to represent privileges of an admin user."""
+    def __init__(self):
+        self.privileges = ["can add post ","can delete post","can ban user"]
+    
+    def show_privileges(self):
+        """Display the admin's privileges."""
+        print(f"The following are privileges:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+class Admin(User):
+    """A class to represent an admin user."""
+    
+    
+    def __init__(self,first_name,last_name):
+        """Initialize attributes of the parent class."""
+        
+        super().__init__(first_name,last_name)
+        self.permissions = Privileges()
+        
+        
+    
+admin_user = Admin("Alice", "Smith")
+admin_user.describe_user()
+admin_user.permissions.show_privileges()
