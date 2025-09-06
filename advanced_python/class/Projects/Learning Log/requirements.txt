@@ -1,6 +1,0 @@
-Django==5.2.3
-django-bootstrap5
-gunicorn
-psycopg2-binary
-whitenoise
-dj-database-url
