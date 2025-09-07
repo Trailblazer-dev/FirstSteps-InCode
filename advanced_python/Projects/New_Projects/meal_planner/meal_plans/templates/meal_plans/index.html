@@ -1,0 +1,30 @@
+{% comment %} Meal Plans Index Page {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plans</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'meal_plans:index' %}">Home</a>
+        <a href="#">Recipes</a>
+        <a href="#">Shopping List</a>
+        <a href="#">Calendar</a>
+    </nav>
+    <header>
+        <h1>Welcome to the Meal Planner</h1>
+        <p>Plan your meals, manage recipes, and create shopping lists.</p>
+    </header>   
+    <main>
+        <section>
+            <h2>Get Started</h2>
+            <p>Use the navigation links above to explore meal planning features.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meal Planner</p>     
+    </footer>
+</body>
+</html> 
