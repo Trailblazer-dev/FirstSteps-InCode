@@ -8,4 +8,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     # page that shows all topic
     path('topics/',views.topics,name='topics'),
+    # Details page for each topic
+    path('topics/<int:topic_id>/',views.topic,name='topic'),
 ]
