@@ -1,12 +1,33 @@
 {%extends 'learning_logs/base.html'%}
 
 {% block content%}
-{% if form.errors%}
-  <p>Your username and password didn't match.Please try again.</p>
-{% endif%}
-<form action= "{% url 'accounts:login' %}" method = 'post'>
-    {% csrf_token%}
-    {{form.as_div}}
-    <button name = 'submit'>Login in </button>
-</form>
+{% if form.errors %}
+  <div class="alert alert-danger" role="alert">
+    <p>Your username and password didn't match. Please try again.</p>
+  </div>
+{% endif %}
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Login</h4>
+      </div>
+      <div class="card-body">
+        <form action="{% url 'accounts:login' %}" method="post">
+          {% csrf_token %}
+          <div class="mb-3">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+          </div>
+          <div class="mb-3">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+          </div>
+          <button type="submit" name="submit" class="btn btn-primary">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content%}

@@ -1,8 +1,12 @@
 {% extends "learning_logs/base.html" %}
 
 {% block content %}
-<p>Learning Log     </p>
-
-<p>Welcome to Learning Log. This is a place where you can document your learning journey. You can create topics and add entries to each topic to keep track of what you've learned.</p>
+<div class="jumbotron">
+    <h1 class="display-4">Learning Log</h1>
+    <p class="lead">Welcome to Learning Log. This is a place where you can document your learning journey.</p>
+    <hr class="my-4">
+    <p>You can create topics and add entries to each topic to keep track of what you've learned.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'learning_logs:topics' %}" role="button">View Topics</a>
+</div>
 
 {% endblock content %}

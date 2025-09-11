@@ -1,20 +1,26 @@
 {% extends 'learning_logs/base.html' %}
 
 {% block content %}
-  <h1>{{ topic.text }}</h1>
-  <p>Entries</p>
-  <p>
-<a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
-</p>
-  <ul>
+  <h1 class="mb-4">{{ topic.text }}</h1>
+  
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Entries</h4>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}" class="btn btn-primary btn-sm">Add new entry</a>
+  </div>
+
+  <div class="list-group">
     {% for entry in entries %}
-      <li>
-        <p>{{ entry.date_added|date:'M d,Y H:i'}}</p>
-        <p>{{ entry.text |linebreaks}}</p>
-        <p><a href="{% url 'learning_logs:edit_entry' entry.id %}">Edit entry</a></p>
-      </li>
+      <div class="list-group-item list-group-item-action mb-3">
+        <div class="d-flex justify-content-between">
+          <small class="text-muted">{{ entry.date_added|date:'M d, Y H:i' }}</small>
+          <a href="{% url 'learning_logs:edit_entry' entry.id %}" class="btn btn-outline-secondary btn-sm">Edit</a>
+        </div>
+        <div class="mt-2">
+          {{ entry.text|linebreaks }}
+        </div>
+      </div>
     {% empty %}
-      <li>There are no entries for this topic yet.</li>
+      <div class="alert alert-info">There are no entries for this topic yet.</div>
     {% endfor %}
-  </ul>
+  </div>
 {% endblock %}
